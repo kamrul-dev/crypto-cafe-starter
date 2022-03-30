@@ -12,13 +12,21 @@ const Coins = () => {
             })
     }, [])
     return (
-        <div>
-            {
-                coins.map(coin => <CoinCard
-                    key={coin.id}
-                    coin={coin}
-                ></CoinCard>)
-            }
+        <div className='px-4 pt-20 pb-24 mx-auto max-w-7xl md:px-2'>
+            <p className='text-center text-3xl font-bold text-gray'>
+                Available Crypto Currencies
+            </p>
+            <p className='text-center mb-12 text-xl font-normal text-gray-500'>
+                Total Coins: {coins.length}
+            </p>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-4'>
+                {
+                    coins.map(coin => <CoinCard
+                        key={coin.id}
+                        coin={coin}
+                    ></CoinCard>)
+                }
+            </div>
         </div>
     );
 };
