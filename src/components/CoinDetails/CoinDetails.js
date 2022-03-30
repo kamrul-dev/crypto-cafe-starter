@@ -14,7 +14,7 @@ const CoinDetails = () => {
     return (
         <div className='px-4 h-[70vh] pt-20 mx-auto max-w-7xl md:px-2'>
             <div className='h-full grid grid-cols-1 md:grid-cols-2 justify-items-center gap-4 md:justify-around content-center'>
-                <div>
+                <div className='order-2 md:order-1'>
                     <h1 className='text-3xl'>General Info:</h1>
                     <hr />
                     <h1>Coin Name: {coin.name}</h1>
@@ -26,7 +26,7 @@ const CoinDetails = () => {
                     <h1>Community Score: {coin.community_score}</h1>
                     <h1>Eveloper Score: {coin.developer_score}</h1>
                 </div>
-                <div className='flex justify-center items-center'>
+                <div className='flex justify-center items-center order-1 md:order-2'>
                     <img src={coin.image?.large} alt="" />
                 </div>
 
